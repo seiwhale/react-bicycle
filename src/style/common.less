@@ -1,0 +1,50 @@
+// 公共样式
+@import "./default";
+@import "./loading";
+
+ul, li {
+  list-style: none;
+}
+
+.clearfix {
+  &::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    clear: both;
+  }
+}
+
+.container {
+  display: flex;
+  .menu {
+    height: calc(100vh);
+    min-width: 180px;
+    background-color: #001529;
+  }
+  .main {
+    background-color: @colorL;
+    height: calc(100vh);
+    overflow: auto;
+  }
+  .content {
+    position: relative;
+    padding: 20px;
+  }
+}
+
+.content-wrap {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  margin-top: -2px;
+  .ant-table-wrapper {
+    margin-left: -1px;
+    margin-right: -1px;
+  }
+}
+
+.operate-wrap {
+  button {
+    margin-right: 10px;
+  }
+}
